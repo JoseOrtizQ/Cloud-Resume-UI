@@ -1,0 +1,42 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main gradient -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Glow background (blurred version) -->
+  <rect x="4" y="4" width="32" height="32" rx="6" ry="6" 
+        fill="url(#mainGradient)" 
+        opacity="0.3" 
+        filter="url(#glow)"/>
+  
+  <!-- Main logo background -->
+  <rect x="4" y="4" width="32" height="32" rx="6" ry="6" 
+        fill="url(#mainGradient)" 
+        filter="url(#shadow)"/>
+  
+  <!-- Text -->
+  <text x="20" y="26" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="14" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="white">JO</text>
+</svg>
