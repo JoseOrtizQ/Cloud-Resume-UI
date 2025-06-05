@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
-import Education from './components/Education'; 
+import Education from './components/Education';
+import Certifications from './components/Certifications'; 
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Navbar />
       <Hero />
       <Projects />
-      <Education /> 
+      <Education />
+      <Certifications /> 
     </div>
   );
 }
