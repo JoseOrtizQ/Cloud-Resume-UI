@@ -1,10 +1,12 @@
 import React from 'react';
-import Navbar from './components/Navbar'; // Adjust path if needed
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 function App() {
   return (
     <div>
       <Navbar />
+      <Hero />
     </div>
   );
 }
