@@ -13,9 +13,9 @@ const Certifications = () => {
     {
       title: "CCNA: Introduction to Networks",
       issuer: "Cisco Networking Academy",
-      year: "2022",
+      year: "2024",
       icon: "🌐",
-      link: "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+      link: "https://www.credly.com/badges/07b7c313-368b-4141-b9c2-bd4ca874379f/public_url",
       platform: "Credly"
     },
     {
@@ -29,7 +29,7 @@ const Certifications = () => {
     {
       title: "CCNA: Enterprise Networking, Security, and Automation",
       issuer: "Cisco Networking Academy",
-      year: "2022",
+      year: "2025",
       icon: "🌐",
       link: "https://www.credly.com/badges/fc9c6833-ab08-4fd7-b88b-6824dbe854af/public_url",
       platform: "Credly"
