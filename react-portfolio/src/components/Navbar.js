@@ -47,10 +47,16 @@ const Navbar = () => {
 
   const handleNavClick = (href) => {
     setIsMenuOpen(false);
-    // Smooth scroll to section
+    // Smooth scroll to section with navbar offset
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const navbarHeight = 80; // Height of the navbar (h-20 = 5rem = 80px)
+      const elementPosition = element.offsetTop - navbarHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
