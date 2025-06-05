@@ -21,9 +21,9 @@ const Certifications = () => {
     {
       title: "CCNA: Switching, Routing, and Wireless Essentials",
       issuer: "Cisco Networking Academy",
-      year: "2022",
+      year: "2025",
       icon: "🌐",
-      link: "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+      link: "https://www.credly.com/badges/78d31053-795f-409e-bcd8-14cb050acba3/public_url",
       platform: "Credly"
     },
     {
