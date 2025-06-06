@@ -50,7 +50,7 @@ const Navbar = () => {
     // Smooth scroll to section with navbar offset
     const element = document.querySelector(href);
     if (element) {
-      const navbarHeight = 80; // Height of the navbar (h-20 = 5rem = 80px)
+      const navbarHeight = 60; // Reduced from 80 to 60 to get closer to content
       const elementPosition = element.offsetTop - navbarHeight;
       
       window.scrollTo({
