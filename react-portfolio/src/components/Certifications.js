@@ -37,47 +37,47 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="bg-gradient-to-br from-slate-50 to-blue-50 text-gray-900 py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+    <section id="certifications" className="bg-gradient-to-br from-slate-50 to-blue-50 text-gray-900 py-16 px-4">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold mb-3 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Certifications
         </h2>
-        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-600 text-center mb-10 max-w-xl mx-auto text-sm">
           Professional certifications demonstrating expertise across networking, cybersecurity, SQL, and programming
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
             <div 
               key={index}
-              className="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-blue-200 text-center"
+              className="group bg-white p-5 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 border border-gray-100 hover:border-blue-200 text-center"
             >
-              <div className="flex items-center justify-center mb-4">
-                <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
+              <div className="flex items-center justify-center mb-3">
+                <div className="text-2xl group-hover:scale-110 transition-transform duration-300">
                   {cert.icon}
                 </div>
-                <div className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full ml-auto">
+                <div className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full ml-auto">
                   {cert.year}
                 </div>
               </div>
               
-              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors text-center">
+              <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors text-center">
                 {cert.title}
               </h3>
               
-              <p className="text-sm text-gray-600 font-medium mb-4 text-center">
+              <p className="text-xs text-gray-600 font-medium mb-3 text-center">
                 {cert.issuer}
               </p>
               
               {cert.link && (
-                <div className="mb-4 text-center">
+                <div className="mb-3 text-center">
                   <a 
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors group/link"
+                    className="inline-flex items-center text-xs font-medium text-blue-600 hover:text-blue-800 transition-colors group/link"
                   >
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     View on {cert.platform}
@@ -86,7 +86,7 @@ const Certifications = () => {
                 </div>
               )}
               
-              <div className="mt-4 pt-4 border-t border-gray-100">
+              <div className="mt-3 pt-3 border-t border-gray-100">
                 <div className="flex items-center justify-center">
                   <div className="flex items-center text-xs text-gray-500">
                     <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
@@ -95,7 +95,7 @@ const Certifications = () => {
                     Verified Certification
                   </div>
                   {cert.platform && (
-                    <div className="text-xs text-gray-400 font-medium ml-4">
+                    <div className="text-xs text-gray-400 font-medium ml-3">
                       {cert.platform}
                     </div>
                   )}
@@ -105,8 +105,8 @@ const Certifications = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <p className="text-gray-600 text-sm">
+        <div className="text-center mt-10">
+          <p className="text-gray-600 text-xs">
             Continuously expanding knowledge through professional development and industry certifications
           </p>
         </div>
