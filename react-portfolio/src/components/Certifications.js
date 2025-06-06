@@ -7,7 +7,7 @@ const Certifications = () => {
       issuer: "Udemy",
       year: "2022",
       icon: "🗄️",
-      link: "https://www.udemy.com/certificate/your-certificate-id/",
+      link: "/assests/The Complete SQL Bootcamp Cert.pdf",
       platform: "Udemy"
     },
     {
