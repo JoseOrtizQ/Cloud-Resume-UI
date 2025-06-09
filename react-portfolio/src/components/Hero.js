@@ -18,8 +18,6 @@ const Hero = () => {
         <h1 className="text-4xl md:text-6xl font-bold text-white">Hi, I'm José</h1>
         <section className="flex flex-wrap justify-center gap-11 text-3xl text-gray-300 drop-shadow-md">
           {[
-            ['html5-plain-wordmark', 'HTML5'],
-            ['css3-plain-wordmark', 'CSS3'],
             ['python-plain-wordmark', 'Python'],
             ['github-original', 'GitHub'],
             ['amazonwebservices-original', 'AWS'],
