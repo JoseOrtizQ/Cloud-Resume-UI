@@ -31,7 +31,7 @@ const Certifications = () => {
       issuer: "Cisco Networking Academy",
       year: "2025",
       icon: "🌐",
-      link: "https://www.credly.com/badges/fc9c6833-ab08-4fd7-b88b-6824dbe854af/public_url",
+      link: "https://www.credly.com/badges/78d31053-795f-409e-bcd8-14cb050acba3/public_url",
       platform: "Credly"
     }
   ];
