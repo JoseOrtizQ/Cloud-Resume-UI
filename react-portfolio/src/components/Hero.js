@@ -1,4 +1,5 @@
 import React from 'react';
+import VisitorCounter from '../VisitorCounter';
 
 const Hero = () => {
   return (
@@ -32,6 +33,12 @@ const Hero = () => {
             </div>
           ))}
         </section>
+
+        {/* Visitor Counter */}
+        <div className="text-center mt-4 text-white">
+          <VisitorCounter />
+        </div>
+
       </div>
     </div>
   );
