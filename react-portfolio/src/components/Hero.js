@@ -15,9 +15,9 @@ const Hero = () => {
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
-      <div className="relative z-10 flex flex-col items-center space-y-8">
+      <div className="relative z-10 flex flex-col items-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white">Hi, I'm José</h1>
-        <section className="flex flex-wrap justify-center gap-11 text-3xl text-gray-300 drop-shadow-md">
+        <section className="flex flex-wrap justify-center gap-11 text-3xl text-gray-300 drop-shadow-md mt-8">
           {[
             ['python-plain-wordmark', 'Python'],
             ['github-original', 'GitHub'],
@@ -35,7 +35,7 @@ const Hero = () => {
         </section>
 
         {/* Visitor Counter */}
-        <div className="text-center mt-4 text-white">
+        <div className="text-center text-white mt-2">
           <VisitorCounter />
         </div>
 
