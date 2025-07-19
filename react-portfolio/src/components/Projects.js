@@ -19,8 +19,8 @@ const Projects = () => {
       description: "Developed a cloud-based resume application hosted on AWS S3, featuring a visitor counter powered by API Gateway, Lambda, and DynamoDB. The project includes CI/CD automation, infrastructure as code, and follows modern DevOps practices to showcase professional cloud skills.",
       technologies: ["AWS S3", "Lambda", "DynamoDB", "CloudFront"],
       status: "Completed",
-      link: "https://github.com/yourusername/cloud-resume",
-      linkText: "View on GitHub",
+      link: "https://large-puma-4e9.notion.site/AWS-The-Cloud-Resume-Challenge-Front-end-230ba0d128c980d29799c7380506d13e",
+      linkText: "View on Notion",
       category: "Cloud Development",
       highlights: ["Serverless Architecture", "Database Integration", "CDN Optimization"]
     }
