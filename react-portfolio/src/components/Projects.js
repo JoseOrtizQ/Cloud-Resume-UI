@@ -14,15 +14,15 @@ const Projects = () => {
       highlights: ["Network Configuration", "Multi-OS Environment", "Security Implementation"]
     },
     {
-      title: "AWS Cloud Resume Challenge",
+      title: "The Cloud Resume Challenge on AWS - Front End",
       date: "2025",
       description: "Created a responsive resume site using React.js and Tailwind CSS, with a clean, component-based layout. Hosted on AWS S3 with CloudFront for fast global delivery. Version-controlled with Git, the front-end emphasizes best practices, accessibility, and smooth AWS integration.",
-      technologies: ["React", "AWS S3", "Git", "CloudFront"],
+      technologies: ["Git", "React", "AWS S3", "CloudFront"],
       status: "Completed",
       link: "https://large-puma-4e9.notion.site/AWS-The-Cloud-Resume-Challenge-Front-end-230ba0d128c980d29799c7380506d13e",
       linkText: "View on Notion",
       category: "Cloud Development",
-      highlights: ["Serverless Architecture", "Database Integration", "CDN Optimization"]
+      highlights: ["CDN Optimization", "Static Hosting with S3 & CloudFront", "Responsive UI with React & Tailwind CSS"]
     }
   ];
 
