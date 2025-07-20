@@ -14,7 +14,7 @@ const Projects = () => {
       highlights: ["Network Configuration", "Multi-OS Environment", "Security Implementation"]
     },
     {
-      title: "The Cloud Resume Challenge on AWS - Front End",
+      title: "The Cloud Resume Challenge - Front End",
       date: "2025",
       description: "Created a responsive resume site using React.js and Tailwind CSS, with a clean, component-based layout. Hosted on AWS S3 with CloudFront for fast global delivery. Version-controlled with Git, the front-end emphasizes best practices, accessibility, and smooth AWS integration.",
       technologies: ["Git", "React", "AWS S3", "CloudFront"],
