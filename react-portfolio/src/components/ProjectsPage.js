@@ -25,15 +25,15 @@ const AllProjects = () => {
       highlights: ["CDN Optimization", "Static Hosting with S3 & CloudFront", "Responsive UI with React & Tailwind CSS"]
     },
     {
-      title: "Your Third Project Title",
+      title: "The Cloud Resume Challenge - Back End",
       date: "2025",
-      description: "Add your project description here. This is a placeholder for your third project that's already documented and ready to be added. Update this with the actual project details, technologies used, and key achievements.",
-      technologies: ["Technology1", "Technology2", "Technology3", "Technology4"],
+      description: "Built a scalable, serverless back end using AWS Lambda, API Gateway, and DynamoDB to track and return website visitor count. All infrastructure was automated with CloudFormation.",
+      technologies: ["Python", "AWS Lambda", "DynamoDB", "API Gateway", "CloudFormation"],
       status: "Completed",
       link: "https://your-notion-link-here.com",
       linkText: "View on Notion",
-      category: "Your Category",
-      highlights: ["Key Achievement 1", "Key Achievement 2", "Key Achievement 3"]
+      category: "Cloud Development",
+      highlights: ["Serverless API with Lambda & API Gateway", "Real-Time Visitor Counter with DynamoDB", "Infrastructure as Code with CloudFormation"]
     }
   ];
 
