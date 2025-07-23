@@ -31,7 +31,7 @@ const About = () => {
         {/* Stats Section */}
         <div className="flex justify-center gap-6 md:gap-12 mb-10 flex-wrap">
           <div className="text-center">
-            <div className="text-2xl font-bold mb-2">1+</div>
+            <div className="text-2xl font-bold mb-2">2+</div>
             <div className="text-xs text-white/80 uppercase tracking-wider">Years Experience</div>
           </div>
           <div className="text-center">
