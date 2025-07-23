@@ -89,26 +89,6 @@ const AllProjects = () => {
       {/* Projects Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Stats Overview */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">{projects.length}</div>
-              <div className="text-gray-600 font-medium">Total Projects</div>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">
-                {projects.filter(p => p.status === "Completed").length}
-              </div>
-              <div className="text-gray-600 font-medium">Completed</div>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">
-                {[...new Set(projects.flatMap(p => p.technologies))].length}
-              </div>
-              <div className="text-gray-600 font-medium">Technologies Used</div>
-            </div>
-          </div>
-
           {/* Projects Grid */}
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
