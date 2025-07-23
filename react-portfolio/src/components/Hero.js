@@ -25,6 +25,7 @@ const Hero = () => {
             ['docker-plain', 'Docker'],
             ['postgresql-plain-wordmark', 'SQL'],
             ['linux-plain', 'Linux'],
+            ['bash-plain', 'PowerShell'],
             ['windows8-original', 'Windows']
           ].map(([icon, label]) => (
             <div key={label} className="flex flex-col items-center group">
