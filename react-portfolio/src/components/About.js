@@ -1,6 +1,19 @@
 import React from 'react';
 
 const About = () => {
+  // Function to handle smooth scrolling with offset
+  const scrollToProjects = (e) => {
+    e.preventDefault();
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      const offsetTop = projectsSection.offsetTop - 80; // Adjust this value as needed
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="about" className="bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white py-16 px-4">
       <div className="max-w-5xl mx-auto">
@@ -97,12 +110,12 @@ const About = () => {
           >
             Get In Touch
           </a>
-          <a 
-            href="#projects" 
-            className="px-6 py-2 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-indigo-900 hover:-translate-y-1 transition-all duration-300 text-sm"
+          <button 
+            onClick={scrollToProjects}
+            className="px-6 py-2 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-indigo-900 hover:-translate-y-1 transition-all duration-300 text-sm cursor-pointer"
           >
             View My Work
-          </a>
+          </button>
         </div>
       </div>
     </section>
