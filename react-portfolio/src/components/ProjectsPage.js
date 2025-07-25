@@ -34,7 +34,7 @@ const AllProjects = () => {
       description: "Built a scalable, serverless back end using AWS Lambda, API Gateway, and DynamoDB to track and return website visitor count. All infrastructure was automated with CloudFormation.",
       technologies: ["Python", "AWS Lambda", "DynamoDB", "API Gateway", "CloudFormation"],
       status: "Completed",
-      link: "https://your-notion-link-here.com",
+      link: "https://large-puma-4e9.notion.site/AWS-The-Cloud-Resume-Challenge-Back-end-238ba0d128c9800cbc9cf57c598b44e4",
       linkText: "View on Notion",
       category: "Cloud Development",
       highlights: ["Serverless API with Lambda & API Gateway", "Real-Time Visitor Counter with DynamoDB", "Infrastructure as Code with CloudFormation"],
