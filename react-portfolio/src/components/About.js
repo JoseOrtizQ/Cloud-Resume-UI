@@ -103,13 +103,7 @@ const About = () => {
         </div>
 
         {/* Contact Buttons */}
-        <div className="flex justify-center gap-3 flex-wrap">
-          <a 
-            href="#contact" 
-            className="px-6 py-2 bg-white text-indigo-900 font-semibold rounded-full hover:bg-white/90 hover:-translate-y-1 transition-all duration-300 shadow-lg text-sm"
-          >
-            Get In Touch
-          </a>
+        <div className="flex justify-center">
           <button 
             onClick={scrollToProjects}
             className="px-6 py-2 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-indigo-900 hover:-translate-y-1 transition-all duration-300 text-sm cursor-pointer"
