@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Check if we're on the home page
+  const isHomePage = location.pathname === '/';
 
   // Handle scroll effect
   useEffect(() => {
@@ -14,8 +20,10 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle active section highlighting
+  // Handle active section highlighting (only on home page)
   useEffect(() => {
+    if (!isHomePage) return;
+
     const handleScroll = () => {
       const sections = ['home', 'projects', 'education', 'certifications', 'about', 'contact'];
       const scrollPosition = window.scrollY + 100;
@@ -34,7 +42,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   const navItems = [
     { name: 'Home', href: '#home', id: 'home' },
@@ -45,28 +53,40 @@ const Navbar = () => {
     { name: 'Contact Me', href: '#contact', id: 'contact' }
   ];
 
-  const handleNavClick = (href) => {
+  const handleNavClick = (href, id) => {
     setIsMenuOpen(false);
-    // Smooth scroll to section with navbar offset
-    const element = document.querySelector(href);
-    if (element) {
-      const navbarHeight = 60; // Reduced from 80 to 60 to get closer to content
-      const elementPosition = element.offsetTop - navbarHeight;
-      
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
+    
+    if (isHomePage) {
+      // If on home page, scroll to section normally
+      const element = document.querySelector(href);
+      if (element) {
+        const navbarHeight = 60;
+        const elementPosition = element.offsetTop - navbarHeight;
+        
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // If on secondary page, navigate to home page with hash
+      navigate(`/${href}`);
     }
   };
 
   const handleLogoClick = () => {
     setIsMenuOpen(false);
-    // Scroll to top (Hero section)
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    
+    if (isHomePage) {
+      // If on home page, scroll to top
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      // If on secondary page, navigate to home
+      navigate('/');
+    }
   };
 
   return (
@@ -102,18 +122,19 @@ const Navbar = () => {
                 href={item.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavClick(item.href);
+                  handleNavClick(item.href, item.id);
                 }}
                 className={`relative px-5 py-3 text-base font-medium rounded-lg transition-all duration-300 group ${
-                  activeSection === item.id
+                  isHomePage && activeSection === item.id
                     ? 'text-blue-400 bg-slate-800/50'
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/30'
                 }`}
               >
                 <span className="relative z-10">{item.name}</span>
-                {activeSection === item.id && (
+                {isHomePage && activeSection === item.id && (
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-400 rounded-full"></div>
                 )}
+
               </a>
             ))}
           </div>
@@ -195,10 +216,10 @@ const Navbar = () => {
                 href={item.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavClick(item.href);
+                  handleNavClick(item.href, item.id);
                 }}
                 className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
-                  activeSection === item.id
+                  isHomePage && activeSection === item.id
                     ? 'text-blue-400 bg-slate-700/50'
                     : 'text-slate-300 hover:text-white hover:bg-slate-700/30'
                 }`}
