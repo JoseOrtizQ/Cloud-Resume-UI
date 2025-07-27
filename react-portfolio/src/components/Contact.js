@@ -88,7 +88,7 @@ const Contact = () => {
                 Let's discuss your next project and bring your ideas to life.
               </p>
               <a 
-                href="mailto:joseortizgarciaq.ca@gmail.com" 
+                href="mailto:Jose Ortiz <joseortizgarciaq.ca@gmail.com>"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span>Get in Touch</span>
