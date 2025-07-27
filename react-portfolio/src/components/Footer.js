@@ -17,8 +17,7 @@ const Footer = () => {
               <h3 className="text-white font-semibold text-base">José Ortiz</h3>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Full Stack Developer passionate about creating efficient, scalable solutions 
-              and building meaningful digital experiences.
+              System Administration | AWS | Linux | Networking | Automation | Support
             </p>
           </div>
 
