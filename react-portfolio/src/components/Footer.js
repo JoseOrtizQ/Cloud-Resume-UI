@@ -3,6 +3,21 @@ import React from 'react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      const headerOffset = 80; // Adjust this value based on your fixed header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <footer className="bg-slate-900 text-slate-300 py-12 px-4">
       <div className="max-w-4xl mx-auto">
@@ -25,16 +40,32 @@ const Footer = () => {
           <div className="space-y-3">
             <h4 className="text-white font-semibold text-sm">Quick Links</h4>
             <div className="space-y-1">
-              <a href="#projects" className="block text-slate-400 hover:text-blue-400 transition-colors text-sm">
+              <a 
+                href="#projects" 
+                onClick={(e) => handleSmoothScroll(e, 'projects')}
+                className="block text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer"
+              >
                 Projects
               </a>
-              <a href="#education" className="block text-slate-400 hover:text-blue-400 transition-colors text-sm">
+              <a 
+                href="#education" 
+                onClick={(e) => handleSmoothScroll(e, 'education')}
+                className="block text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer"
+              >
                 Education
               </a>
-              <a href="#certifications" className="block text-slate-400 hover:text-blue-400 transition-colors text-sm">
+              <a 
+                href="#certifications" 
+                onClick={(e) => handleSmoothScroll(e, 'certifications')}
+                className="block text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer"
+              >
                 Certifications
               </a>
-              <a href="#about" className="block text-slate-400 hover:text-blue-400 transition-colors text-sm">
+              <a 
+                href="#about" 
+                onClick={(e) => handleSmoothScroll(e, 'about')}
+                className="block text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer"
+              >
                 About
               </a>
             </div>
