@@ -11,6 +11,13 @@ const Navbar = () => {
   // Check if we're on the home page
   const isHomePage = location.pathname === '/';
 
+  // Scroll to top when navigating to home page
+  useEffect(() => {
+    if (isHomePage) {
+      window.scrollTo(0, 0);
+    }
+  }, [isHomePage]);
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
