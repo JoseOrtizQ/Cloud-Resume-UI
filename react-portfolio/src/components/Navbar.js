@@ -20,19 +20,29 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle active section highlighting (only on home page)
+  // Handle active section highlighting (only on home page) - UPDATED VERSION
   useEffect(() => {
     if (!isHomePage) return;
 
     const handleScroll = () => {
       const sections = ['home', 'projects', 'education', 'certifications', 'about', 'contact'];
       const scrollPosition = window.scrollY + 100;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
 
-      for (const section of sections) {
+      // Special handling for when user is near bottom of page
+      if (scrollPosition + windowHeight >= documentHeight - 50) {
+        setActiveSection('contact');
+        return;
+      }
+
+      // Regular section detection
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
         const element = document.getElementById(section);
         if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          const { offsetTop } = element;
+          if (scrollPosition >= offsetTop - 50) {
             setActiveSection(section);
             break;
           }
@@ -134,7 +144,6 @@ const Navbar = () => {
                 {isHomePage && activeSection === item.id && (
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-400 rounded-full"></div>
                 )}
-
               </a>
             ))}
           </div>

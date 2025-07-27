@@ -8,6 +8,7 @@ import Education from './components/Education';
 import Certifications from './components/Certifications'; 
 import About from './components/About';
 import Contact from './components/Contact';
+import Footer from './components/Footer'; // Add this import
 import ProjectsPageComponent from './components/ProjectsPage';
 
 // Create a Home component that contains all your current sections
@@ -41,6 +42,7 @@ const Home = () => {
       <Certifications /> 
       <About />
       <Contact />
+      <Footer /> {/* Add Footer here */}
     </>
   );
 };
@@ -51,6 +53,7 @@ const ProjectsPage = () => {
     <>
       <Navbar />
       <ProjectsPageComponent />
+      <Footer /> {/* Add Footer here too for consistency */}
     </>
   );
 };
