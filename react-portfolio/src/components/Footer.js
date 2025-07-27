@@ -6,6 +6,8 @@ const Footer = () => {
   const handleSmoothScroll = (e, targetId) => {
     e.preventDefault();
     const element = document.getElementById(targetId);
+    
+    // If element exists on current page, scroll to it
     if (element) {
       const headerOffset = 80; // Adjust this value based on your fixed header height
       const elementPosition = element.getBoundingClientRect().top;
@@ -15,6 +17,9 @@ const Footer = () => {
         top: offsetPosition,
         behavior: 'smooth'
       });
+    } else {
+      // If element doesn't exist, navigate to home page with hash
+      window.location.href = `/#${targetId}`;
     }
   };
 
