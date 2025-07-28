@@ -1,13 +1,18 @@
-# Detect JS and React in all nested folders
+# Force GitHub to detect JS and React files (all nested folders)
 *.js linguist-detectable=true
 *.jsx linguist-detectable=true
+react-portfolio/src/components/** linguist-detectable=true
 
-# Explicitly include src/components and other React folders
-react-portfolio/src/** linguist-detectable=true
-
-# Detect CSS but deprioritize it
-*.css linguist-detectable=true
+# Deprioritize CSS
+*.css linguist-detectable=false
 tailwind.config.js linguist-detectable=false
+postcss.config.js linguist-detectable=false
 
-# Ignore HTML for stats
+# Ignore SVGs and images for language stats
+*.svg linguist-detectable=false
+*.png linguist-detectable=false
+*.jpg linguist-detectable=false
+*.jpeg linguist-detectable=false
+
+# Ignore HTML for language stats
 *.html linguist-detectable=false
