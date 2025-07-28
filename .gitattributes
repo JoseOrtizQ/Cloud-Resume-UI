@@ -1,0 +1,7 @@
+# Force GitHub to detect JS and React files
+*.js linguist-detectable=true
+*.jsx linguist-detectable=true
+*.css linguist-detectable=true
+
+# Ignore HTML for language stats
+*.html linguist-detectable=false
