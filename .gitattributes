@@ -1,7 +1,7 @@
 # Force GitHub to detect JS and React files (all nested folders)
 *.js linguist-detectable=true
 *.jsx linguist-detectable=true
-react-portfolio/src/components/** linguist-detectable=true
+react-portfolio/src/** linguist-detectable=true
 
 # Deprioritize CSS
 *.css linguist-detectable=false
