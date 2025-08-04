@@ -17,7 +17,7 @@ const AllProjects = () => {
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "The Cloud Resume Challenge - Front End",
+      title: "AWS: Cloud Resume Website. Front End",
       date: "2025",
       description: "Created a responsive resume site using React.js and Tailwind CSS, with a clean, component-based layout. Hosted on AWS S3 with CloudFront for fast global delivery. Version-controlled with Git, the front-end emphasizes best practices, accessibility, and smooth AWS integration.",
       technologies: ["Git", "React", "Tailwind CSS", "AWS S3", "CloudFront"],
@@ -29,9 +29,9 @@ const AllProjects = () => {
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "The Cloud Resume Challenge - Back End",
+      title: "AWS: Cloud Resume Website. Back End",
       date: "2025",
-      description: "Built a scalable, serverless back end using AWS Lambda, API Gateway, and DynamoDB to track and return website visitor count. All infrastructure was automated with CloudFormation.",
+      description: "Built a scalable, serverless back end using AWS Lambda, API Gateway, and DynamoDB to track and return website visitor count in real time. All infrastructure was automated and deployed with CloudFormation, following best practices for security, reliability, and seamless AWS integration.",
       technologies: ["Python", "AWS Lambda", "DynamoDB", "API Gateway", "CloudFormation"],
       status: "Completed",
       link: "https://large-puma-4e9.notion.site/AWS-The-Cloud-Resume-Challenge-Back-end-238ba0d128c9800cbc9cf57c598b44e4",
