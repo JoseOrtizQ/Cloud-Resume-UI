@@ -8,8 +8,8 @@ const Education = () => {
       school: "Collège de Maisonneuve",
       location: "Montréal, QC",
       period: "2024 – 2025",
-      status: "Current",
-      isRecent: true
+      status: "Completed",
+      isRecent: false
     },
     {
       id: 2,
